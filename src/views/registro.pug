@@ -1,0 +1,23 @@
+include includes/header.pug
+
+.container 
+    
+    form.my-5(action="/api/create", method="post")
+        .row
+            p= errorMsg 
+            h2.text-center.mb-4 REGISTRO 
+        .col-8.offset-2
+            .card.p-3
+                .mb-2
+                    input.form-control(type='text', placeholder="Nombre de usuario" id="username" name='username' required)
+                .mb-2
+                    input.form-control(type='password' placeholder="Contraseña" id="password" name='password' required)
+                .mb-2
+                    input.form-control(type='password' placeholder="Repite la contaseña" id="password2" name='password2' required)
+                .mb-2
+                .form-check.form-switch
+                    input.form-check-input(type='checkbox' role='switch' id="admin" name="admin")
+                    label.form-check-label(for='chexkbox') Marca esta casilla si quieres registrarte como administrador
+
+                .d-grid.gap-2.mb-2
+                button.btn.btn-success(type='submit') Registrarme

@@ -1,0 +1,16 @@
+include includes/header.pug
+
+.container 
+    form.my-5(action="/api/inicioSesion", method="post")
+        .row
+            h2.text-center.mb-4 INICIO DE SESION 
+        .col-8.offset-2
+            .card.p-3
+                .mb-2
+                    input.form-control(type='text', placeholder="Nombre de usuario" id="email" name="username")
+                .mb-2
+                    input.form-control(type='password' placeholder="Contraseña" id="password" name="password")
+                .d-grid.gap-2
+                button.btn.btn-primary(type='submit') INICIAR SESION
+
+

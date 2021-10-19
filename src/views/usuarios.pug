@@ -1,0 +1,26 @@
+include includes/header.pug
+
+    body(style="background-color: #1C2833")
+    
+    a.btn.btn-warning(type="button" href="http://localhost:4700/pages/inicio-sesion") Cerrar Sesión
+
+    .card.col-6.offset-4(style='width: 25rem; background-color: #212F3D; color:white')
+        h3.text-center.p-4 LISTA DE USUARIOS
+
+
+    .card-group
+        each user in users
+            .container.col-sm
+                .mt-5
+                    .card(style='width: 21rem; border-color: #273746;') 
+                        .card-body(style="background-color: #273746;")
+                            h4.card-title.text-center(style="color: white ") NOMBRE DE USUARIO
+                                .col-12.card-body.mb-2.mt-4(style=' border: 2px solid #566573; border-radius: 2em') 
+                                    h4.card-title.text-center(style= "color: #82E0AA") #{user.username}
+                                .col-12
+                                    h6.m-4(style="color: white ") admin: #{user.admin}
+                            .row
+                                .col-12
+                                button.btn.btn-danger(type="button" onclick='remove('+ user +')' id="removeBtn") DELETE
+    
+

@@ -1,0 +1,13 @@
+include includes/header.pug
+
+    body(style="background-color: #1C2833")
+    
+    a.btn.btn-warning(type="button" href="http://localhost:4700/pages/inicio-sesion") Cerrar Sesión
+
+
+    .row
+        .col-6.offset-4.my-5
+            .card(style='width: 25rem;')
+                .card-body
+                    h3.card-title.text-center NOMBRE DE USUARIO
+                    h4.card-title.text-center(style="color:green") #{username}
